@@ -8,63 +8,84 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #E6D3B3;
-    color: #2E1B12;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #f5f1eb;
+    color: #2e1b12;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px;
 }
 
 header img {
-    width: 200px;
+    width: 180px;
 }
 
 /* HERO */
 .hero {
-    background-color: #6B3E26;
-    color: #E6D3B3;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 100px 20px;
+    background: #6b3e26;
+    color: #fff;
 }
 
 .hero h1 {
     font-size: 48px;
-    line-height: 1.2;
-    margin: 0;
+    max-width: 700px;
+    line-height: 1.3;
 }
 
-/* SECCIONES */
-section {
-    padding: 60px 20px;
+/* SECTION */
+.section {
+    padding: 80px 20px;
     text-align: center;
 }
 
-/* TARJETAS */
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.section p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    width: 250px;
-    border-radius: 10px;
+/* GRID PRODUCTOS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.product {
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+}
+
+.product p {
+    margin: 0;
+    font-weight: bold;
 }
 
 /* BOTÓN */
 .btn {
     display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
     background: black;
     color: white;
-    padding: 15px 30px;
-    margin-top: 30px;
     text-decoration: none;
     font-weight: bold;
 }
@@ -72,11 +93,10 @@ section {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 40px 20px;
-    font-size: 16px;
+    padding: 40px;
+    font-size: 14px;
 }
 </style>
-
 </head>
 
 <body>
@@ -85,53 +105,53 @@ footer {
     <img src="logo.png" alt="XANAB">
 </header>
 
+<!-- HERO -->
 <div class="hero">
     <h1>La tradición no se fabrica…<br>se hereda</h1>
 </div>
 
-<section>
-    <h2>Hecho en Dolores Hidalgo</h2>
+<!-- HISTORIA -->
+<div class="section">
     <p>
         En XANAB cada par guarda una historia,<br>
         la esencia de lo hecho a mano<br>
         que se siente en cada paso.
     </p>
-</section>
+</div>
 
-<section>
-    <h2>Colección</h2>
+<!-- PRODUCTOS -->
+<div class="products">
 
-    <div class="cards">
-
-        <div class="card">
-            <h3>TRADICIONAL</h3>
-            <p>Clásico artesanal</p>
-        </div>
-
-        <div class="card">
-            <h3>MODERNO</h3>
-            <p>Uso diario</p>
-        </div>
-
-        <div class="card">
-            <h3>DE VESTIR</h3>
-            <p>Elegancia</p>
-        </div>
-
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba3" alt="">
+        <h3>TRADICIONAL</h3>
+        <p>$450 MXN</p>
     </div>
-</section>
 
-<section>
-    <h2>¿Listo para tu par?</h2>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1582582429416-29a33b2cdb1e" alt="">
+        <h3>MODERNO</h3>
+        <p>$550 MXN</p>
+    </div>
 
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1593032465175-481ac7f401e0" alt="">
+        <h3>DE VESTIR</h3>
+        <p>$650 MXN</p>
+    </div>
+
+</div>
+
+<!-- CTA -->
+<div class="section">
     <a class="btn" href="https://wa.me/524111082020">
         COTIZA POR WHATSAPP
     </a>
-</section>
+</div>
 
 <footer>
-    <p>📍 Dolores Hidalgo, Guanajuato</p>
-    <p>📦 Envíos a todo México</p>
+    <p>Dolores Hidalgo, Guanajuato</p>
+    <p>Envíos a todo México</p>
 </footer>
 
 </body>
