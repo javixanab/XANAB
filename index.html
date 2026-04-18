@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XANAB - Huaraches Artesanales</title>
+<title>XANAB</title>
 
 <style>
 
@@ -17,17 +17,11 @@ body {
 /* HEADER */
 header {
     text-align: center;
-    padding: 40px 20px 20px;
+    padding: 60px 20px 20px;
 }
 
 header img {
-    width: 140px;
-}
-
-h1 {
-    margin-top: 10px;
-    font-size: 22px;
-    letter-spacing: 2px;
+    width: 160px;
 }
 
 /* FRASE PRINCIPAL */
@@ -35,17 +29,18 @@ h1 {
     background-color: #8b5e3c;
     color: white;
     text-align: center;
-    padding: 40px 20px;
-    font-size: 28px;
+    padding: 50px 20px;
+    font-size: 32px;
     font-weight: 300;
+    letter-spacing: 1px;
 }
 
 /* PRODUCTOS */
 .products {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    padding: 60px 20px;
+    gap: 50px;
+    padding: 80px 20px;
     flex-wrap: wrap;
 }
 
@@ -59,58 +54,77 @@ h1 {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
 
 .card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
+    background: #ddd;
 }
 
 .card h2 {
     text-align: center;
-    margin: 15px 0 5px;
+    margin: 20px 0 5px;
     font-size: 18px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .card p {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: bold;
 }
 
-/* SECCIÓN INFERIOR PRO */
+/* INFO PRO */
 .info {
-    background-color: #f5f1eb;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
 .info-top {
     display: flex;
     justify-content: center;
     gap: 80px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     flex-wrap: wrap;
     font-size: 20px;
     color: #5a3e2b;
 }
 
 .info-text {
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
-    font-size: 26px;
-    line-height: 1.6;
+    font-size: 30px;
+    line-height: 1.7;
     color: #3e2a1f;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     font-size: 14px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
 }
 
 </style>
@@ -121,7 +135,6 @@ footer {
 
 <header>
     <img src="logo.png">
-    <h1>XANAB</h1>
 </header>
 
 <section class="hero">
@@ -153,8 +166,8 @@ footer {
 <section class="info">
 
     <div class="info-top">
-        <div>📍 <strong>Dolores Hidalgo, Guanajuato</strong></div>
-        <div>📦 <strong>Envíos a todo México</strong></div>
+        <div>📍 Dolores Hidalgo, Guanajuato</div>
+        <div>📦 Envíos a todo México</div>
     </div>
 
     <div class="info-text">
@@ -168,6 +181,11 @@ footer {
 <footer>
     © 2026 XANAB - Huaraches Artesanales
 </footer>
+
+<!-- WHATSAPP SOLO UNA VEZ -->
+<a class="whatsapp" href="https://wa.me/524111082020" target="_blank">
+    WhatsApp
+</a>
 
 </body>
 </html>
