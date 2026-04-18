@@ -29,7 +29,7 @@ header img {
     background-color: #8b5e3c;
     color: white;
     text-align: center;
-    padding: 90px 20px;
+    padding: 100px 20px;
 }
 
 .hero h1 {
@@ -38,18 +38,42 @@ header img {
     letter-spacing: 2px;
 }
 
+/* INTRO */
+.intro {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px 20px;
+}
+
+.intro-box {
+    max-width: 700px;
+    text-align: center;
+}
+
+.intro-box h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.intro-box p {
+    font-size: 18px;
+    color: #6b4a35;
+    line-height: 1.6;
+}
+
 /* PRODUCTOS */
 .products {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    padding: 80px 20px;
+    gap: 40px;
+    padding: 60px 20px;
     flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    width: 300px;
+    width: 280px;
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
@@ -62,7 +86,7 @@ header img {
 
 .card img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -89,7 +113,7 @@ header img {
     display: flex;
     justify-content: center;
     gap: 80px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     flex-wrap: wrap;
     font-size: 18px;
     color: #5a3e2b;
@@ -121,11 +145,6 @@ footer {
     text-decoration: none;
     font-weight: bold;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-.whatsapp:hover {
-    transform: scale(1.1);
 }
 
 </style>
@@ -141,22 +160,32 @@ footer {
     <h1>La tradición no se fabrica, se hereda</h1>
 </section>
 
+<section class="intro">
+    <div class="intro-box">
+        <h2>Hecho a mano en México</h2>
+        <p>
+            Cada huarache XANAB es elaborado por manos artesanas,
+            respetando técnicas tradicionales que han pasado de generación en generación.
+        </p>
+    </div>
+</section>
+
 <section class="products">
 
     <div class="card">
-        <img src="https://picsum.photos/400/300?1">
+        <img src="https://picsum.photos/400/300?random=1">
         <h2>TRADICIONAL</h2>
         <p>$450 MXN</p>
     </div>
 
     <div class="card">
-        <img src="https://picsum.photos/400/300?2">
+        <img src="https://picsum.photos/400/300?random=2">
         <h2>MODERNO</h2>
         <p>$550 MXN</p>
     </div>
 
     <div class="card">
-        <img src="https://picsum.photos/400/300?3">
+        <img src="https://picsum.photos/400/300?random=3">
         <h2>DE VESTIR</h2>
         <p>$650 MXN</p>
     </div>
@@ -179,7 +208,7 @@ footer {
 </section>
 
 <footer>
-    © 2026 XANAB - Huaraches Artesanales
+    © 2024 XANAB - Huaraches Artesanales
 </footer>
 
 <a class="whatsapp" href="https://wa.me/524111082020" target="_blank">
