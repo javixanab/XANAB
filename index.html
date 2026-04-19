@@ -1,176 +1,481 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XANAB</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XANAB - Huaraches Artesanales</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body{
-    margin:0;
-    font-family: 'Arial', sans-serif;
-    background:#f5f1eb;
-    color:#222;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* HEADER */
-header{
-    text-align:center;
-    padding:25px;
-}
-header img{
-    width:120px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4efe8;
+      color: #2a1b12;
+    }
 
-/* HERO */
-.hero{
-    height:80vh;
-    background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1600') center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-}
+    header {
+      background: #f4efe8;
+      text-align: center;
+      padding: 28px 20px 18px;
+      border-bottom: 1px solid rgba(42, 27, 18, 0.08);
+    }
 
-.hero h1{
-    font-size:48px;
-    margin:0;
-}
+    header img {
+      width: 130px;
+      max-width: 100%;
+      display: inline-block;
+    }
 
-.hero p{
-    margin-top:15px;
-    font-size:18px;
-}
+    .hero {
+      min-height: 74vh;
+      background:
+        linear-gradient(rgba(34, 22, 14, 0.60), rgba(34, 22, 14, 0.60)),
+        radial-gradient(circle at center, rgba(171, 116, 73, 0.35), rgba(75, 45, 27, 0.85)),
+        linear-gradient(135deg, #6a422b 0%, #3f2719 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-/* INFO */
-.info{
-    text-align:center;
-    padding:15px;
-    font-weight:bold;
-    background:white;
-}
+    .hero-content {
+      max-width: 980px;
+    }
 
-/* PRODUCTOS */
-.products{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    padding:50px 20px;
-    flex-wrap:wrap;
-}
+    .hero small {
+      display: inline-block;
+      color: #e9d9cc;
+      letter-spacing: 3px;
+      font-size: 12px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
 
-.card{
-    background:white;
-    width:300px;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:.3s;
-}
-.card:hover{
-    transform:translateY(-5px);
-}
+    .hero h1 {
+      color: #ffffff;
+      margin: 0;
+      font-size: clamp(36px, 6vw, 72px);
+      line-height: 1.05;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
 
-.card img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
-}
+    .hero p {
+      color: #f2e5da;
+      margin: 22px auto 0;
+      font-size: clamp(16px, 2vw, 22px);
+      max-width: 760px;
+      line-height: 1.5;
+    }
 
-.card h3{
-    margin:15px 0 5px;
-}
+    .hero a {
+      display: inline-block;
+      margin-top: 34px;
+      padding: 14px 34px;
+      border: 1px solid rgba(255,255,255,0.85);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+      background: rgba(255,255,255,0.06);
+    }
 
-.card p{
-    font-weight:bold;
-    margin-bottom:20px;
-}
+    .hero a:hover {
+      background: #ffffff;
+      color: #2a1b12;
+    }
 
-/* TEXTO FINAL */
-.section{
-    text-align:center;
-    padding:50px 20px;
-}
+    .info-bar {
+      background: #fffaf5;
+      padding: 18px 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      color: #4b3021;
+      border-top: 1px solid rgba(42, 27, 18, 0.08);
+      border-bottom: 1px solid rgba(42, 27, 18, 0.08);
+    }
 
-.section h2{
-    font-size:30px;
-}
+    .collection {
+      padding: 70px 20px 30px;
+      text-align: center;
+    }
 
-.section p{
-    max-width:600px;
-    margin:auto;
-    margin-top:10px;
-}
+    .collection h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      color: #2a1b12;
+      letter-spacing: 1px;
+    }
 
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 22px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-}
-</style>
+    .collection p {
+      margin: 0 auto;
+      max-width: 720px;
+      color: #6b4b3a;
+      font-size: 18px;
+      line-height: 1.6;
+    }
 
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(260px, 340px));
+      justify-content: center;
+      gap: 34px;
+      padding: 42px 20px 50px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(26, 14, 8, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid rgba(42, 27, 18, 0.06);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(26, 14, 8, 0.12);
+    }
+
+    .card-image {
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.08), transparent 40%);
+      pointer-events: none;
+    }
+
+    .img-tradicional {
+      background:
+        radial-gradient(circle at 30% 25%, rgba(255,255,255,0.22), transparent 18%),
+        linear-gradient(135deg, #9f6a43 0%, #6c4327 100%);
+    }
+
+    .img-moderno {
+      background:
+        radial-gradient(circle at 70% 20%, rgba(255,255,255,0.22), transparent 18%),
+        linear-gradient(135deg, #55463d 0%, #2e2724 100%);
+    }
+
+    .img-vestir {
+      background:
+        radial-gradient(circle at 75% 25%, rgba(255,255,255,0.18), transparent 18%),
+        linear-gradient(135deg, #2a2a2a 0%, #0f0f0f 100%);
+    }
+
+    .shoe {
+      position: relative;
+      width: 220px;
+      height: 110px;
+      border-radius: 55px 55px 38px 38px / 50px 50px 28px 28px;
+      transform: rotate(-12deg);
+      box-shadow:
+        inset -10px -12px 18px rgba(0,0,0,0.18),
+        inset 12px 10px 18px rgba(255,255,255,0.10),
+        0 18px 24px rgba(0,0,0,0.20);
+      z-index: 1;
+    }
+
+    .shoe::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 42px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 28px;
+      left: 42px;
+      top: 18px;
+      transform: rotate(2deg);
+      box-shadow: inset 0 -4px 10px rgba(0,0,0,0.10);
+    }
+
+    .shoe::after {
+      content: "";
+      position: absolute;
+      width: 92%;
+      height: 12px;
+      left: 4%;
+      bottom: -10px;
+      background: rgba(34,22,14,0.35);
+      border-radius: 50%;
+      filter: blur(4px);
+    }
+
+    .shoe-tradicional {
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(73, 39, 18, 0.55) 0 10px,
+          rgba(171, 121, 73, 0.90) 10px 22px
+        );
+      border: 3px solid rgba(96, 55, 27, 0.45);
+    }
+
+    .shoe-moderno {
+      background:
+        linear-gradient(135deg, #4f4a46 0%, #27211e 100%);
+      border: 3px solid rgba(255,255,255,0.08);
+    }
+
+    .shoe-vestir {
+      background:
+        linear-gradient(135deg, #1f1f1f 0%, #050505 100%);
+      border: 3px solid rgba(180, 145, 98, 0.20);
+    }
+
+    .laces {
+      position: absolute;
+      top: 32px;
+      left: 58px;
+      width: 100px;
+      height: 18px;
+      z-index: 2;
+    }
+
+    .laces span {
+      display: block;
+      height: 2px;
+      background: rgba(255,255,255,0.75);
+      margin-bottom: 5px;
+      border-radius: 2px;
+    }
+
+    .card-body {
+      padding: 24px 18px 28px;
+      text-align: center;
+    }
+
+    .card-body h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #2a1b12;
+    }
+
+    .card-body p {
+      margin: 0;
+      font-size: 30px;
+      font-weight: 700;
+      color: #6f452b;
+    }
+
+    .story {
+      padding: 50px 20px 80px;
+      text-align: center;
+    }
+
+    .story h2 {
+      margin: 0 0 16px;
+      font-size: clamp(28px, 4vw, 42px);
+      color: #2a1b12;
+    }
+
+    .story p {
+      margin: 0 auto;
+      max-width: 760px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: #5b4030;
+    }
+
+    .footer {
+      padding: 18px 20px 40px;
+      text-align: center;
+      color: #7a5a49;
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.28);
+      z-index: 999;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(37, 211, 102, 0.32);
+    }
+
+    @media (max-width: 1100px) {
+      .products {
+        grid-template-columns: repeat(2, minmax(260px, 340px));
+      }
+    }
+
+    @media (max-width: 760px) {
+      header img {
+        width: 110px;
+      }
+
+      .hero {
+        min-height: 66vh;
+      }
+
+      .hero h1 {
+        line-height: 1.1;
+      }
+
+      .info-bar {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+        padding-top: 28px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .card-image {
+        height: 290px;
+      }
+
+      .shoe {
+        width: 190px;
+        height: 95px;
+      }
+
+      .shoe::before {
+        width: 110px;
+        left: 34px;
+      }
+
+      .laces {
+        left: 48px;
+        width: 84px;
+      }
+
+      .story p,
+      .collection p {
+        font-size: 18px;
+      }
+
+      .whatsapp {
+        right: 14px;
+        left: 14px;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<img src="logo.png">
-</header>
+  <header>
+    <img src="logo.png" alt="XANAB">
+  </header>
 
-<section class="hero">
-<div>
-<h1>LA TRADICIÓN NO SE FABRICA,<br>SE HEREDA</h1>
-<p>Huaraches artesanales hechos en México</p>
-</div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <small>Artesanal · Accesorios · Piel</small>
+      <h1>LA TRADICIÓN NO SE FABRICA, SE HEREDA</h1>
+      <p>Huaraches artesanales hechos en México, con identidad, carácter y esencia de oficio real.</p>
+      <a href="#coleccion">Ver colección</a>
+    </div>
+  </section>
 
-<div class="info">
-📍 Dolores Hidalgo, Guanajuato | 📦 Envíos a todo México
-</div>
+  <div class="info-bar">
+    📍 Dolores Hidalgo, Guanajuato &nbsp; | &nbsp; 📦 Envíos a todo México
+  </div>
 
-<section class="products">
+  <section class="collection" id="coleccion">
+    <h2>Colección XANAB</h2>
+    <p>
+      Diseños inspirados en la tradición mexicana, pensados para quienes valoran lo auténtico,
+      lo duradero y lo bien hecho.
+    </p>
+  </section>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?q=80&w=800">
-<h3>TRADICIONAL</h3>
-<p>$450 MXN</p>
-</div>
+  <section class="products">
+    <article class="card">
+      <div class="card-image img-tradicional">
+        <div class="shoe shoe-tradicional"></div>
+        <div class="laces">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>TRADICIONAL</h3>
+        <p>$450 MXN</p>
+      </div>
+    </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=800">
-<h3>MODERNO</h3>
-<p>$550 MXN</p>
-</div>
+    <article class="card">
+      <div class="card-image img-moderno">
+        <div class="shoe shoe-moderno"></div>
+        <div class="laces">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>MODERNO</h3>
+        <p>$550 MXN</p>
+      </div>
+    </article>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800">
-<h3>DE VESTIR</h3>
-<p>$650 MXN</p>
-</div>
+    <article class="card">
+      <div class="card-image img-vestir">
+        <div class="shoe shoe-vestir"></div>
+        <div class="laces">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>DE VESTIR</h3>
+        <p>$650 MXN</p>
+      </div>
+    </article>
+  </section>
 
-</section>
+  <section class="story">
+    <h2>Trabajo artesanal auténtico</h2>
+    <p>
+      Cada par de XANAB nace del oficio, del detalle y de la paciencia. No es producción sin alma:
+      es tradición convertida en calzado con presencia, historia y orgullo mexicano.
+    </p>
+  </section>
 
-<section class="section">
-<h2>Trabajo artesanal auténtico</h2>
-<p>
-Cada par es elaborado a mano por artesanos mexicanos,
-respetando técnicas tradicionales que han pasado de generación en generación.
-</p>
-</section>
+  <div class="footer">
+    © 2026 XANAB · Dolores Hidalgo, Guanajuato
+  </div>
 
-<a class="whatsapp" href="https://wa.me/524111082020?text=Hola,%20quiero%20comprar%20huaraches">
-Comprar por WhatsApp
-</a>
+  <a class="whatsapp" href="https://wa.me/524111082020?text=Hola,%20quiero%20comprar%20huaraches%20XANAB" target="_blank">
+    Comprar por WhatsApp
+  </a>
 
 </body>
 </html>
