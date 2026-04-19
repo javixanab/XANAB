@@ -23,7 +23,7 @@ body{
     width:120px;
 }
 
-/* HERO */
+/* HERO (SOLO ESTO CAMBIÓ) */
 .hero{
     height:500px;
     display:flex;
@@ -43,11 +43,9 @@ body{
 
 .hero h1{
     font-size:48px;
-    margin:10px 0;
 }
 
 .hero p{
-    font-size:18px;
     max-width:600px;
 }
 
@@ -76,11 +74,7 @@ body{
     font-size:32px;
 }
 
-.titulo p{
-    color:#555;
-}
-
-/* PRODUCTOS */
+/* PRODUCTOS (NO TOCADOS) */
 .productos{
     display:flex;
     justify-content:center;
@@ -89,17 +83,28 @@ body{
 }
 
 .card{
-    background:white;
     width:300px;
     border-radius:15px;
     overflow:hidden;
+    background:white;
     box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.card img{
-    width:100%;
+.card-img{
     height:200px;
-    object-fit:cover;
+}
+
+/* ESTOS SON TUS COLORES ORIGINALES */
+.tradicional{
+    background: linear-gradient(#a36a3f, #7a4b2a);
+}
+
+.moderno{
+    background: linear-gradient(#5a4a40, #2f2a26);
+}
+
+.vestir{
+    background: linear-gradient(#1c1c1c, #000);
 }
 
 .card h3{
@@ -109,8 +114,8 @@ body{
 
 .card p{
     text-align:center;
-    font-weight:bold;
     font-size:20px;
+    font-weight:bold;
     margin-bottom:20px;
 }
 
@@ -118,10 +123,6 @@ body{
 .final{
     text-align:center;
     padding:40px;
-}
-
-.final h2{
-    font-size:30px;
 }
 
 /* WHATS */
@@ -163,19 +164,19 @@ body{
 <div class="productos">
 
     <div class="card">
-        <img src="relleno2.jpg">
+        <div class="card-img tradicional"></div>
         <h3>TRADICIONAL</h3>
         <p>$450 MXN</p>
     </div>
 
     <div class="card">
-        <img src="moderno.jpg">
+        <div class="card-img moderno"></div>
         <h3>MODERNO</h3>
         <p>$550 MXN</p>
     </div>
 
     <div class="card">
-        <img src="vestir.jpg">
+        <div class="card-img vestir"></div>
         <h3>DE VESTIR</h3>
         <p>$650 MXN</p>
     </div>
