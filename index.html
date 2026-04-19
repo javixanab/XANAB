@@ -6,126 +6,181 @@
 <title>XANAB - Huaraches Artesanales</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:Arial, Helvetica, sans-serif;background:#f4efe8;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4efe8;
+    color: #2a1b12;
+}
 
 /* HEADER */
-header{ text-align:center; padding:20px; background:#f4efe8; }
-header img{ width:120px; }
+header {
+    background: #e9e2d8;
+    text-align: center;
+    padding: 20px;
+}
 
-/* HERO (fondo con manos + tono café) */
-.hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
+header img {
+    width: 90px;
+}
 
-  background:
-    linear-gradient(rgba(60,30,10,0.75), rgba(60,30,10,0.75)),
+/* HERO (AQUI SOLO CAMBIAMOS FONDO) */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+    linear-gradient(rgba(60,30,10,0.65), rgba(60,30,10,0.65)),
     url('manos.png');
 
-  background-size:cover;
-  background-position:center;
+    background-size: cover;
+    background-position: center;
 }
 
-.hero h1{ font-size:50px; font-weight:bold; margin-bottom:20px; }
-.hero p{ font-size:18px; margin-bottom:30px; }
-
-.btn{
-  padding:12px 25px;
-  border:1px solid #fff;
-  color:#fff;
-  text-decoration:none;
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
-.btn:hover{ background:#fff; color:#000; }
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
 
 /* INFO */
-.info-bar{ text-align:center; padding:15px; font-size:14px; }
+.info {
+    text-align: center;
+    padding: 20px;
+    background: #e9e2d8;
+}
 
 /* PRODUCTOS */
-.productos{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:40px;
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
 }
 
-.card{
-  background:#fff;
-  width:280px;
-  text-align:center;
-  padding-bottom:15px;
+.card {
+    width: 300px;
+    background: #eee;
+    text-align: center;
 }
 
-.card img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-.card h3{ margin:10px 0; }
-.card p{ font-weight:bold; margin-bottom:10px; }
+.card h3 {
+    margin-top: 15px;
+}
 
-/* WHATSAPP (solo uno, abajo izquierda) */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  left:20px;
-  background:#25D366;
-  color:#fff;
-  padding:12px 20px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
+.card p {
+    margin-bottom: 20px;
+}
+
+/* TEXTO FINAL */
+.section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png" alt="XANAB">
+    <img src="logo.png">
 </header>
 
-<section class="hero">
-  <div>
-    <h1>LA TRADICIÓN NO SE FABRICA, SE HEREDA</h1>
-    <p>Huaraches artesanales hechos en México</p>
-    <a href="#" class="btn">VER COLECCIÓN</a>
-  </div>
-</section>
-
-<div class="info-bar">
-📍 Dolores Hidalgo, Guanajuato | 📦 Envíos a todo México
+<div class="hero">
+    <div>
+        <small>ARTESANAL · ACCESORIOS · PIEL</small>
+        <h1>LA TRADICIÓN NO SE FABRICA, SE HEREDA</h1>
+        <p>Huaraches artesanales hechos en México, con identidad, carácter y esencia de oficio real.</p>
+        <button>VER COLECCIÓN</button>
+    </div>
 </div>
 
-<section class="productos">
+<div class="info">
+    📍 Dolores Hidalgo, Guanajuato | 📦 Envíos a todo México
+</div>
 
-  <div class="card">
-    <img src="relleno2.jpg" alt="Tradicional">
-    <h3>TRADICIONAL</h3>
-    <p>$450 MXN</p>
-  </div>
+<div class="section">
+    <h2>Colección XANAB</h2>
+    <p>Diseños inspirados en la tradición mexicana, pensados para quienes valoran lo auténtico.</p>
+</div>
 
-  <div class="card">
-    <img src="moderno.jpg" alt="Moderno">
-    <h3>MODERNO</h3>
-    <p>$550 MXN</p>
-  </div>
+<div class="products">
 
-  <div class="card">
-    <img src="vestir.jpg" alt="De vestir">
-    <h3>DE VESTIR</h3>
-    <p>$650 MXN</p>
-  </div>
+    <div class="card">
+        <img src="relleno2.jpg">
+        <h3>TRADICIONAL</h3>
+        <p>$450 MXN</p>
+    </div>
 
-</section>
+    <div class="card">
+        <img src="moderno.jpg">
+        <h3>MODERNO</h3>
+        <p>$550 MXN</p>
+    </div>
 
-<a href="https://wa.me/524111082020" class="whatsapp">
-  Comprar por WhatsApp
-</a>
+    <div class="card">
+        <img src="vestir.jpg">
+        <h3>DE VESTIR</h3>
+        <p>$650 MXN</p>
+    </div>
+
+</div>
+
+<div class="section">
+    <h2>Trabajo artesanal auténtico</h2>
+    <p>Cada par de XANAB nace del oficio, del detalle y de la paciencia. No es producción sin alma.</p>
+</div>
+
+<a class="whatsapp" href="#">Comprar por WhatsApp</a>
 
 </body>
 </html>
