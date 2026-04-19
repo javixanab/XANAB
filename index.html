@@ -33,7 +33,6 @@ body{
     text-align:center;
     color:white;
 
-    /* 🔥 SOLO ESTO CAMBIÓ */
     background:
     linear-gradient(rgba(60,25,10,0.75), rgba(60,25,10,0.75)),
     url('manos.png');
@@ -67,34 +66,52 @@ body{
     background:#eee7df;
 }
 
+/* TITULO */
+.titulo{
+    text-align:center;
+    margin-top:40px;
+}
+
+.titulo h2{
+    font-size:32px;
+}
+
+.titulo p{
+    color:#555;
+}
+
 /* PRODUCTOS */
 .productos{
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:40px;
     padding:40px;
 }
 
 .card{
     background:white;
-    width:250px;
-    text-align:center;
-    border-radius:10px;
+    width:300px;
+    border-radius:15px;
     overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 🔴 SE DEJA EL CUADRO GRIS ORIGINAL */
-.card .img{
+.card img{
+    width:100%;
     height:200px;
-    background:#ddd;
+    object-fit:cover;
 }
 
 .card h3{
-    margin:10px 0;
+    text-align:center;
+    margin:15px 0 5px;
 }
 
 .card p{
+    text-align:center;
     font-weight:bold;
+    font-size:20px;
+    margin-bottom:20px;
 }
 
 /* TEXTO FINAL */
@@ -103,6 +120,11 @@ body{
     padding:40px;
 }
 
+.final h2{
+    font-size:30px;
+}
+
+/* WHATS */
 .whatsapp{
     position:fixed;
     right:20px;
@@ -133,22 +155,27 @@ body{
 📍 Dolores Hidalgo, Guanajuato | 📦 Envíos a todo México
 </div>
 
+<div class="titulo">
+    <h2>Colección XANAB</h2>
+    <p>Diseños inspirados en la tradición mexicana, pensados para quienes valoran lo auténtico.</p>
+</div>
+
 <div class="productos">
 
     <div class="card">
-        <div class="img"></div>
+        <img src="relleno2.jpg">
         <h3>TRADICIONAL</h3>
         <p>$450 MXN</p>
     </div>
 
     <div class="card">
-        <div class="img"></div>
+        <img src="moderno.jpg">
         <h3>MODERNO</h3>
         <p>$550 MXN</p>
     </div>
 
     <div class="card">
-        <div class="img"></div>
+        <img src="vestir.jpg">
         <h3>DE VESTIR</h3>
         <p>$650 MXN</p>
     </div>
