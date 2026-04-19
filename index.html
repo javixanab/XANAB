@@ -23,7 +23,7 @@ body{
     width:120px;
 }
 
-/* HERO (AQUI SOLO CAMBIAMOS FONDO) */
+/* HERO */
 .hero{
     height:500px;
     display:flex;
@@ -33,7 +33,7 @@ body{
     text-align:center;
     color:white;
 
-    /* 👇 AQUI ESTA EL CAMBIO REAL */
+    /* 🔥 SOLO ESTO CAMBIÓ */
     background:
     linear-gradient(rgba(60,25,10,0.75), rgba(60,25,10,0.75)),
     url('manos.png');
@@ -83,8 +83,10 @@ body{
     overflow:hidden;
 }
 
-.card img{
-    width:100%;
+/* 🔴 SE DEJA EL CUADRO GRIS ORIGINAL */
+.card .img{
+    height:200px;
+    background:#ddd;
 }
 
 .card h3{
@@ -134,19 +136,19 @@ body{
 <div class="productos">
 
     <div class="card">
-        <img src="relleno2.jpg">
+        <div class="img"></div>
         <h3>TRADICIONAL</h3>
         <p>$450 MXN</p>
     </div>
 
     <div class="card">
-        <img src="moderno.jpg">
+        <div class="img"></div>
         <h3>MODERNO</h3>
         <p>$550 MXN</p>
     </div>
 
     <div class="card">
-        <img src="vestir.jpg">
+        <div class="img"></div>
         <h3>DE VESTIR</h3>
         <p>$650 MXN</p>
     </div>
