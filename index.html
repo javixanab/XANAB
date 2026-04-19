@@ -6,134 +6,95 @@
 <title>XANAB - Huaraches Artesanales</title>
 
 <style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4efe8;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial, Helvetica, sans-serif;background:#f4efe8;}
 
 /* HEADER */
-header {
-    text-align: center;
-    padding: 20px;
-    background: #f4efe8;
-}
+header{ text-align:center; padding:20px; background:#f4efe8; }
+header img{ width:120px; }
 
-header img {
-    width: 120px;
-}
+/* HERO (fondo con manos + tono café) */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
 
-/* HERO (AQUI ESTA LO IMPORTANTE DEL FONDO) */
-.hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-
-    background:
+  background:
     linear-gradient(rgba(60,30,10,0.75), rgba(60,30,10,0.75)),
     url('manos.png');
 
-    background-size: cover;
-    background-position: center;
+  background-size:cover;
+  background-position:center;
 }
 
-.hero h1 {
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+.hero h1{ font-size:50px; font-weight:bold; margin-bottom:20px; }
+.hero p{ font-size:18px; margin-bottom:30px; }
 
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+.btn{
+  padding:12px 25px;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
 }
-
-.btn {
-    padding: 12px 25px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: white;
-    color: black;
-}
+.btn:hover{ background:#fff; color:#000; }
 
 /* INFO */
-.info-bar {
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-}
+.info-bar{ text-align:center; padding:15px; font-size:14px; }
 
 /* PRODUCTOS */
-.productos {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
+.productos{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:40px;
 }
 
-.card {
-    background: white;
-    width: 280px;
-    text-align: center;
-    padding-bottom: 15px;
+.card{
+  background:#fff;
+  width:280px;
+  text-align:center;
+  padding-bottom:15px;
 }
 
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
 }
 
-.card h3 {
-    margin: 10px 0;
-}
+.card h3{ margin:10px 0; }
+.card p{ font-weight:bold; margin-bottom:10px; }
 
-.card p {
-    font-weight: bold;
-    margin-bottom: 10px;
+/* WHATSAPP (solo uno, abajo izquierda) */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
 }
-
-/* WHATSAPP SOLO UNO ABAJO IZQUIERDA */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #25D366;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png">
+  <img src="logo.png" alt="XANAB">
 </header>
 
 <section class="hero">
-    <div>
-        <h1>LA TRADICIÓN NO SE FABRICA, SE HEREDA</h1>
-        <p>Huaraches artesanales hechos en México</p>
-        <a href="#" class="btn">VER COLECCIÓN</a>
-    </div>
+  <div>
+    <h1>LA TRADICIÓN NO SE FABRICA, SE HEREDA</h1>
+    <p>Huaraches artesanales hechos en México</p>
+    <a href="#" class="btn">VER COLECCIÓN</a>
+  </div>
 </section>
 
 <div class="info-bar">
@@ -142,28 +103,28 @@ header img {
 
 <section class="productos">
 
-    <div class="card">
-        <img src="relleno2.jpg">
-        <h3>TRADICIONAL</h3>
-        <p>$450 MXN</p>
-    </div>
+  <div class="card">
+    <img src="relleno2.jpg" alt="Tradicional">
+    <h3>TRADICIONAL</h3>
+    <p>$450 MXN</p>
+  </div>
 
-    <div class="card">
-        <img src="moderno.jpg">
-        <h3>MODERNO</h3>
-        <p>$550 MXN</p>
-    </div>
+  <div class="card">
+    <img src="moderno.jpg" alt="Moderno">
+    <h3>MODERNO</h3>
+    <p>$550 MXN</p>
+  </div>
 
-    <div class="card">
-        <img src="vestir.jpg">
-        <h3>DE VESTIR</h3>
-        <p>$650 MXN</p>
-    </div>
+  <div class="card">
+    <img src="vestir.jpg" alt="De vestir">
+    <h3>DE VESTIR</h3>
+    <p>$650 MXN</p>
+  </div>
 
 </section>
 
 <a href="https://wa.me/524111082020" class="whatsapp">
-Comprar por WhatsApp
+  Comprar por WhatsApp
 </a>
 
 </body>
